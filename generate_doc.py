@@ -1,10 +1,14 @@
 import ast
+import os
 import sys
 import openai
 import requests
 import json
+from dotenv import load_dotenv
 # Set up your OpenAI API credentials
-openai.api_key = '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'
+
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def get_gpt3_5_response(messages: list):
