@@ -31,14 +31,15 @@ jobs:
 
     - name: Run Unit Test
       id: unit-test
-      run: python3 unit_test_get_product_list.py
+      run: |
+        python3 unit_test_get_product_list.py > unit_test_output.txt 2>&1
 
     - name: Remove Unit Test File
       run: rm unit_test_get_product_list.py
 
     - name: Check Unit Test Output for Errors
       run: |
-        if echo "${{ github.steps.unit-test.outputs.stdout }}" | grep -q "Error"; then
+        if grep -q "Error" unit_test_output.txt; then
           echo "Error found in unit test output"
           exit 1
         else
