@@ -40,7 +40,7 @@ jobs:
     - name: Check Unit Test Output for Errors
       run: |
         if grep -q "FAILED" unit_test_output.txt; then
-          echo "Error found in unit test output"
+          echo "FAILED found in unit test output"
           exit 1
         else
           echo "Unit test passed"
