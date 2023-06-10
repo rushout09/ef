@@ -39,6 +39,7 @@ jobs:
 
     - name: Check Unit Test Output for Errors
       run: |
+        cat unit_test_output.txt
         if grep -q "Error" unit_test_output.txt; then
           echo "Error found in unit test output"
           exit 1
