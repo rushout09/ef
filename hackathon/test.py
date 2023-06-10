@@ -61,7 +61,7 @@ functions = extract_functions(code)
 for function in functions:
     if function.startswith("def"):
         function_name = function.split("def ")[1].split("(")[0]
-        module_name="hackathon.app "
+        module_name="hackathon.app"
         unit_test_file_name = f"unit_test_{function_name}.py"
 
         with open(unit_test_file_name, 'w') as file:
