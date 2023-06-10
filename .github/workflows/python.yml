@@ -21,5 +21,14 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
+    - name: Generate Unit Test
+      run: python3 hackathon/test.py
+
+    - name: Run Unit Test
+      run: python3 unit_test_get_product_list.py
+
+    - name: Remove Unit Test File
+      run: rm unit_test_get_product_list.py
+
 #    - name: Generate documentation
 #      run: python generate_doc.py main.py
