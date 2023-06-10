@@ -1,9 +1,13 @@
-import openai
 import requests
 import json
+import os
+from dotenv import load_dotenv
+# Set up your OpenAI API credentials
+
+load_dotenv()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Set up OpenAI API credentials
-OPENAI_API_KEY = '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'
 
 def read_code_from_file(file_path):
     with open(file_path, 'r') as file:
@@ -50,7 +54,7 @@ def get_gpt3_5_response(messages: list):
         return None
 
 
-file_path = '/Users/amartyajha/work/zuru/EF/hackathon/app.py'
+file_path = 'app.py'
 code = read_code_from_file(file_path)
 functions = extract_functions(code)
 
