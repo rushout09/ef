@@ -54,7 +54,7 @@ def get_gpt3_5_response(messages: list):
         return None
 
 
-file_path = 'app.py'
+file_path = 'ef/hackathon/app.py'
 code = read_code_from_file(file_path)
 functions = extract_functions(code)
 
