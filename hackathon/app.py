@@ -5,7 +5,7 @@ def get_product_list():
     response = requests.get(url)
     if response.status_code == 200:
         product_list = response.json()
-        return product_list.get("products", [])
+        return product_list.get("product", [])
     else:
         print("Error: Failed to retrieve product list")
         return []
