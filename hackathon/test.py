@@ -69,7 +69,7 @@ for function in functions:
             messages = [
                 {
                     "role": "system",
-                    "content": "Generate only the unit test for the function: {} in the module: {}, ensuring it is semantically valid Python code. Use only the available data within the function and be deterministic, without imagining anything.".format(function_name, module_name)
+                    "content": "Generate only the success unit test for the function: {} in the module: {}, ensuring it is semantically valid Python code. Use only the available data within the function and be deterministic, without imagining anything.".format(function_name, module_name)
                 },
                 {
                     "role": "user",
