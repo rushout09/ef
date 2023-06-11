@@ -1,5 +1,6 @@
 import requests
 
+
 def get_product_list():
     """This function retrieves a list of products from a dummy API and returns it, or an empty list if the API call fails."""
 
